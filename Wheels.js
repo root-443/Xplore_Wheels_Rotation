@@ -1,56 +1,93 @@
+// Wheels
 var canvas = document.getElementById("W1");
 var canvas2 = document.getElementById("W2");
 var canvas3 = document.getElementById("W3");
 var canvas4 = document.getElementById("W4");
+//Wheels
+
+//Rover's Body
+var Body = document.getElementById("Body");
+
+//Rover's body
+
 
 var ctx = canvas.getContext("2d");
 var ctx2 = canvas2.getContext("2d");
 var ctx3 = canvas3.getContext("2d");
 var ctx4 = canvas4.getContext("2d");
 
+var BodyContext = Body.getContext("2d");
+
+
+
+
 var Input1 = document.getElementById("input1");
 var Input2 = document.getElementById("input2");
 var Input3 = document.getElementById("input3");
 var Input4 = document.getElementById("input4");
-
 var SButton = document.getElementById("SUB");
 
-txt = document.getElementById("Title");
-
-ctx.fillStyle = "#ffff00";
-ctx2.fillStyle = "#ffff00";
-ctx3.fillStyle = "#ffff00";
-ctx4.fillStyle ="#ffff00";
-
-function roundedRectangle(con, x, y, w, h)
-{
-  var context = con.getContext("2d");
-  var mx = x + w / 2;
-  var my = y + h / 2;
-  context.beginPath();
-  context.strokeStyle="#ffff00";   
-  context.lineWidth="6";   
-  context.moveTo(x,my);
-  context.quadraticCurveTo(x, y, mx, y);
-  context.quadraticCurveTo(x+w, y, x+w, my);
-  context.quadraticCurveTo(x+w, y+h, mx, y+h);
-  context.quadraticCurveTo(x, y+h, x, my);      
-  context.stroke();
-}
 
 
-//ctx.rotate(20 * Math.PI / 180)
+ctx.fillStyle = "#ffffff";
+ctx2.fillStyle = "#ffffff";
+ctx3.fillStyle = "#ffffff";
+ctx4.fillStyle ="#ffffff";
+
+BodyContext.fillStyle = "#0016db";
 
 
 
+
+
+
+//Wheels
 ctx.fillRect(0, 0, canvas.width, canvas.height)
 ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
 ctx3.fillRect(0, 0, canvas3.width, canvas3.height)
-ctx4.fillRect(0,0,canvas4.width, canvas4.height)
+ctx4.fillRect(0,0,canvas4.width, canvas4.height);
+//Wheels
 
+//Rover
+BodyContext.lineWidth = 8;
+BodyContext.strokeStyle = "blue";
+BodyContext.beginPath();
+BodyContext.rect(57,60,Body.width-113, Body.height-110);
+BodyContext.rotate(-7.606*Math.PI/180);
+BodyContext.lineWidth = 6;
+
+// first arm
+
+BodyContext.moveTo(40,140);
+BodyContext.lineTo(0,0);
+// first arm
+
+//second arm
+BodyContext.moveTo(40,140);
+BodyContext.lineTo(-33,265)
+// second arm
+
+//third arm
+BodyContext.moveTo(220,160);
+BodyContext.lineTo(315,0);
+//third arm
+BodyContext.moveTo(220,160);
+BodyContext.lineTo(335,700);
+
+//fourth arm
+
+
+
+BodyContext.stroke();
+// Rover
+
+
+
+
+// BodyContext.clearRect(0,0,Body.width, Body.height);
+
+// Event listener
 SButton.onclick = function() {
-
-
 
 
 canvas.style.transform = "rotate("+ String(Input1.value) +"deg)";
@@ -59,7 +96,7 @@ canvas3.style.transform = "rotate("+ String(Input3.value) +"deg)";
 canvas4.style.transform = "rotate("+ String(Input4.value) +"deg)";
 
 }
-
+// Event listener
 
 
 
