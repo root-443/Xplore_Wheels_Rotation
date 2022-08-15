@@ -17,12 +17,12 @@ max-width : 300px;
 
 .Rover {
 
-max-width: 300px;
+max-width: 350px;
 margin: 42px auto;
 padding: 15px;
-border: 15px solid white;
+/* border: 15px solid white; */
 border-radius: 5px;
-min-height: 40vh;
+min-height: 50vh;
 position:relative
 
 
@@ -73,5 +73,36 @@ border-radius: 50px;
 
 }
 
+#Body {
 
+
+position:absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+margin: auto;
+border-radius: 10px;
+/* border:  1px solid white; */
+
+
+
+}
+
+
+
+#Mid {
+
+position:absolute;
+padding: 15px;
+right: 0;
+left: 0;
+top: 0;
+bottom : 0;
+margin : auto;
+border: solid 4px blue;
+border-radius: 50px;
+
+
+}
 
