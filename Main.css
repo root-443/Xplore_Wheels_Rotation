@@ -91,18 +91,4 @@ border-radius: 10px;
 
 
 
-#Mid {
-
-position:absolute;
-padding: 15px;
-right: 0;
-left: 0;
-top: 0;
-bottom : 0;
-margin : auto;
-border: solid 4px blue;
-border-radius: 50px;
-
-
-}
 
