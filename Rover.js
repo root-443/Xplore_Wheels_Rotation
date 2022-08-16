@@ -71,11 +71,23 @@ BodyContext.lineTo(-33,265)
 BodyContext.moveTo(220,160);
 BodyContext.lineTo(315,0);
 //third arm
-BodyContext.moveTo(220,160);
-BodyContext.lineTo(335,700);
+
 
 //fourth arm
+BodyContext.moveTo(220,160);
+BodyContext.lineTo(335,700);
+//fourth arm
 
+//top square
+BodyContext.rotate(7.606*Math.PI/180);
+BodyContext.rect(130,30,30,30);
+// top square
+
+// bottom circle
+
+BodyContext.moveTo(158,220);
+BodyContext.arc(143, 244, 25, 0, 2 * Math.PI);
+//bottom circle
 
 
 BodyContext.stroke();
